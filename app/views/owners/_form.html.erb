@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<%= simple_form_for @owner do |f| %>
+  <%= f.input :first_name, label: 'First name' %>
+  <%= f.input :last_name, label: 'Last name'%>
+  <%= f.input :email, label: 'Email' %>
+  <%= f.input :company, label: 'Company name'%>
+  <%= f.button :submit, "Add owner"%>
+<% end %>
