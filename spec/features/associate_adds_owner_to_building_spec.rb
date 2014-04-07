@@ -19,7 +19,7 @@ So that I can refer back to pertinent information
       fill_in "City", with: "Boston"
       fill_in "State", with: 'MA'
       fill_in "Zip", with: "01921"
-      fill_in "Owner", with: owner.full_name
+      select "Dan Clark", from: "Owner"
       click_on "Add building"
 
       expect(page).to have_content("Successfully added building")

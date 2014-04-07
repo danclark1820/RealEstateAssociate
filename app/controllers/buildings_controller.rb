@@ -6,7 +6,6 @@ class BuildingsController < ApplicationController
 
   def create
     @building = Building.new(building_params)
-    binding.pry
     if @building.save
       redirect_to new_building_path
       flash[:notice] = "Successfully added building"
