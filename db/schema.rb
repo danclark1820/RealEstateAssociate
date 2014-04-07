@@ -1,4 +1,4 @@
-# encoding: UTF-8
+  # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404184300) do
+ActiveRecord::Schema.define(version: 20140404203504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buildings", force: true do |t|
+    t.string   "address",     null: false
+    t.string   "city",        null: false
+    t.string   "state",       null: false
+    t.integer  "zip",         null: false
+    t.text     "description"
+    t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "owners", force: true do |t|
     t.string   "first_name", null: false

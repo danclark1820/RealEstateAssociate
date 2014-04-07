@@ -36,6 +36,7 @@ gem 'simple_form'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry-rails'
   gem 'capybara'
   gem 'valid_attribute'
   gem 'shoulda-matchers'
